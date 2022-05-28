@@ -14,17 +14,17 @@ app.get('/', async (req, res) => {
     })
 })
 
-app.get('/getFavBooks', async (req, res) => {
+app.get('/api/getFavBooks', async (req, res) => {
     let data = await getFavBooks().catch(console.dir);
     res.json(data)
 })
 
-app.get('/insertFavBooks', async (req, res) => {
+app.get('/api/insertFavBooks', async (req, res) => {
     let data = await insertFavBooks(req.query).catch(console.dir);
     res.json(data)
 })
 
-app.get('/deleteFavBooks', async (req, res) => {
+app.get('/api/deleteFavBooks', async (req, res) => {
     let data = await deleteFavBooks(req.query).catch(console.dir);
     res.json(data)
 })
