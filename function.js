@@ -31,7 +31,7 @@ async function insertFavBooks(inputs) {
         await client.connect();
 
         const doc = {
-            id: inputs.title,
+            id: inputs.id,
             title: inputs.title,
             link: inputs.link,
             authors: inputs.authors,
