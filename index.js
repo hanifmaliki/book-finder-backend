@@ -1,12 +1,15 @@
 const { getFavBooks, insertFavBooks, deleteFavBooks } = require('./function.js')
 
 const express = require('express')
-// const cors = require('cors')
+const cors = require('cors')
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cors({
+    origin: '*'
+}));
 
 app.get('/', async (req, res) => {
     res.json({
