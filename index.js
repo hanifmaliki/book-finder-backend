@@ -19,8 +19,8 @@ app.get('/api/getFavBooks', async (req, res) => {
     res.json(data)
 })
 
-app.get('/api/insertFavBooks', async (req, res) => {
-    let data = await insertFavBooks(req.query).catch(console.dir);
+app.post('/api/insertFavBooks', async (req, res) => {
+    let data = await insertFavBooks(req.body).catch(console.dir);
     res.json(data)
 })
 
